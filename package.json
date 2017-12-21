@@ -1,0 +1,14 @@
+{
+  "name": "shutter_server",
+  "description": "Server that operates the roller shutters in my apartment",
+  "main": "ShutterServer.js",
+  "author": "Michael Ziegler <michael.ziegler.92@gmail.com>",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ShutterServer.js"
+  },
+  "dependencies": {
+    "ws": "^3.0.0"
+  },
+  "license": "GPLv3"
+}

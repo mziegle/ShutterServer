@@ -1,0 +1,96 @@
+{ 
+    "host":"192.168.0.0",
+    "port":"8888",
+    "shutters": [
+        {
+            "id": 1,
+            "name": "Livingroom",
+            "state": "idle",
+            "closingDuration": 27,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 2,
+            "name": "Guestroom",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 3,
+            "name": "Workroom_right",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 4,
+            "name": "Workroom_center",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 5,
+            "name": "Workroom_left",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0, 
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 6,
+            "name": "Bedroom_right",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0, 
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 7,
+            "name": "Bedroom_left",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        },
+        {
+            "id": 8,
+            "name": "Bathroom",
+            "state": "idle",
+            "closingDuration": 20,
+            "closingState": 0.0,
+            "currentTimeout": {},
+            "currentInterval": {},
+            "gpioUp": 4,
+            "gpioDown": 15
+        }
+    ]
+}
+
+
