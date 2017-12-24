@@ -18,6 +18,12 @@ getShutterById = (id) => {
     }
 }
 
+applyOnEveryShutter = (apply) => {
+    for(var i = 0; i < shutters.length; i++){
+        apply(shutters[i]);
+    }
+}
+
 getHostPort = () => {
     return config.host + ":" + config.port;
 }
@@ -26,6 +32,24 @@ getShutters = () => {
     return shutters;
 }
 
+getShutterTransferObjects = () => {
+
+    var shutterTransferObjects = [];
+
+    for(var i = 0; i < shutters.length; i++){
+        var shutter = shutters[i];
+        shutterTransferObjects[i] = {
+                "id": shutter.id,
+                "name": shutter.name,
+                "closingState": shutter.closingState,
+            }
+    }
+
+    return shutterTransferObjects;
+}
+
 exports.getShutters = getShutters;
 exports.getShutterById = getShutterById;
 exports.getHostPort = getHostPort;
+exports.applyOnEveryShutter = applyOnEveryShutter;
+exports.getShutterTransferObjects = getShutterTransferObjects;

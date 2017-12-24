@@ -3,94 +3,140 @@
     "port":"8888",
     "shutters": [
         {
-            "id": 1,
+            "id": 0,
             "name": "Livingroom",
             "state": "idle",
             "closingDuration": 27,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 4,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 17,
+                "gpioObject": null
+            }
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Guestroom",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 27,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 22,
+                "gpioObject": null
+            }
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Workroom_right",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 5,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 6,
+                "gpioObject": null
+            }
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Workroom_center",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 13,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 19,
+                "gpioObject": null
+            }
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Workroom_left",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0, 
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 4,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 4,
+                "gpioObject": null
+            }
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "Bedroom_right",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0, 
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 4,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 17,
+                "gpioObject": null
+            }
         },
         {
-            "id": 7,
+            "id": 6,
             "name": "Bedroom_left",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 4,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 17,
+                "gpioObject": null
+            }
         },
         {
-            "id": 8,
+            "id": 7,
             "name": "Bathroom",
             "state": "idle",
             "closingDuration": 20,
             "closingState": 0.0,
-            "currentTimeout": {},
-            "currentInterval": {},
-            "gpioUp": 4,
-            "gpioDown": 15
+            "currentTimeout": null,
+            "currentInterval": null,
+            "gpioUp": {
+                "number": 4,
+                "gpioObject": null
+            },
+            "gpioDown": {
+                "number": 17,
+                "gpioObject": null
+            }
         }
     ]
 }
-
-
