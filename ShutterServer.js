@@ -21,13 +21,13 @@ wsServer.on('connection', function connection(socket) {
             case 'GET_SHUTTERS': {
 
                 socket.send(JSON.stringify({type: 'SHUTTERS', data: datasource.getShutterTransferObjects()}));
-
                 break;
-            }
-            case 'UP': {
+
+            } case 'UP': {
 
                 var shutterId = message.shutterId;
                 var shutter = datasource.getShutterById(shutterId);
+
                 if(shutter.state === 'idle'){
                     moveShutterUp(SHUTTER_UPDATE_INTERVAL_MILLIS, shutter);
                 } else if (shutter.state == 'down') {
@@ -59,27 +59,28 @@ wsServer.on('connection', function connection(socket) {
 
                 break;
 
+            } default: {
+                console.log("Invalid message");
             }
-
+            
         }
-
     });
 
     socket.onerror = (error) => {
         console.log("An Error occured! \n I need to make sure that the shutters stop running");
-        stopShuttersIfNoOneIsConnected();
+        stopShuttersIfNoOneElseIsConnected();
     };
 
-    /*
+    
     socket.on('close', (code, reason) => {
-        console.log("Connnection has been closed. I'm stopping all actions if nobody is there anymore");
-        stopShuttersIfNoOneIsConnected();
+        console.log("Connection is closed");
+        // stopShuttersIfNoOneIsConnected();
     });
-    */
 
-    stopShuttersIfNoOneIsConnected = () => {
 
-        console.log("I'm checking now, if someone else is still connected");
+    stopShuttersIfNoOneElseIsConnected = () => {
+
+        console.log("I'm checking now, if some one else is still connected");
         var noOneConnected = true;
 
         wsServer.clients.forEach((client) => {
