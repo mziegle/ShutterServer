@@ -10,6 +10,13 @@ const SECOND_IN_MILLIS = 1000;
 const SHUTTER_UPDATE_INTERVAL_MILLIS = 500;
 const TICK_OFFSET = 200;
 
+process.on('SIGINT', function () {
+    console.log("Oh got an SIGINT");
+    GPIOCntl.shutdown(datasource.getShutters());
+    // Persist the shutter configuration...
+    process.exit(1);
+});
+
 wsServer.on('connection', function connection(socket) {
 
     socket.on('message', data => {
@@ -118,8 +125,7 @@ wsServer.on('connection', function connection(socket) {
         shutter.currentTimeout = setTimeout(() => {
                 stopShutter(shutter);
             },
-            actualClosingDuration * SECOND_IN_MILLIS + TICK_OFFSET
-        );       
+            actualClosingDuration * SECOND_IN_MILLIS + TICK_OFFSET);       
         
     };
 
@@ -142,8 +148,7 @@ wsServer.on('connection', function connection(socket) {
         shutter.currentTimeout = setTimeout(() => {
                 stopShutter(shutter);
             },
-            actualClosingDuration * SECOND_IN_MILLIS + TICK_OFFSET
-        );
+            actualClosingDuration * SECOND_IN_MILLIS + TICK_OFFSET);
     
     };
 
