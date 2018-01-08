@@ -28,6 +28,10 @@ getHostPort = () => {
     return config.host + ":" + config.port;
 }
 
+getPort = () => {
+    return config.port;
+}
+
 getShutters = () => {
     return shutters;
 }
@@ -53,3 +57,4 @@ exports.getShutterById = getShutterById;
 exports.getHostPort = getHostPort;
 exports.applyOnEveryShutter = applyOnEveryShutter;
 exports.getShutterTransferObjects = getShutterTransferObjects;
+exports.getPort = getPort;

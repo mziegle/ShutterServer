@@ -2,13 +2,15 @@ const WebSocket = require('ws');
 const datasource = require('./ShutterConfiguration');
 const GPIOCntl = require('./GPIOControl');
 
-GPIOCntl.initialize(datasource.getShutters());
-
-const wsServer = new WebSocket.Server({ port: 3000 }, () => {console.log('WebSocket Server is listening on port 3000')});
-
 const SECOND_IN_MILLIS = 1000;
 const SHUTTER_UPDATE_INTERVAL_MILLIS = 500;
 const TICK_OFFSET = 200;
+
+
+GPIOCntl.initialize(datasource.getShutters());
+
+const wsServer = new WebSocket.Server({ port: datasource.getPort() }, () => {console.log('WebSocket Server is listening on port ' + datasource.getPort())});
+
 
 process.on('SIGINT', function () {
     console.log("Oh got an SIGINT");
